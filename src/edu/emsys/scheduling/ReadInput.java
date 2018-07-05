@@ -27,7 +27,7 @@ public class ReadInput {
 			
 			while((eachLine = input.readLine()) != null){
 				String[] tokens = eachLine.split(",");
-				System.out.println(tokens[0]+tokens[1]+tokens[2]);
+				System.out.println(tokens[0]+tokens[1]);
 				Tasks task = new Tasks();
 				
 				task.setTaskName(Integer.parseInt(tokens[0].trim()));
