@@ -3,20 +3,24 @@ package edu.emsys.scheduling;
 import java.util.Comparator;
 
 public class Tasks {
-	
-	private int taskName;
-	private int taskPeriod;
-	private int taskWcet;
-	private int deadLine;
-	private int executedTime;
+	/**
+	 * 共11个属性
+	 */
+	private int taskName;            //任务名 ID
+	private int taskPeriod;          //周期
+	private int taskWcet;			 //任务的WCET
+	private int deadLine;			 //绝对截止时间
+	private int executedTime;		 
 	private int slackTime; 
 	private int arrivalTime;
 	private int preEmption;
 	private int missDeadine;
-	private int numberOfCompletions;
-	private int totalResponseTime;
+	private int numberOfCompletions; //完成的job数
+	private int totalResponseTime;	 //总响应时间 ResponseTime：完成时间 - 释放时间
 
-
+	/**
+	 * 构造函数  初始化
+	 */
 	public Tasks(){
 		this.taskName = 0;
 		this.taskPeriod = 0;

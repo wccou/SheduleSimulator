@@ -20,14 +20,18 @@ public class ReadInput {
 		BufferedReader input = null;
 		
 		try {
-			
+			/** 任务配置文件里每一行都代表一个任务 每一行的三个值分别代表taskname taskperiod taskwcet
+			 * 	1, 10, 4 
+				2, 7, 1 
+				3, 9, 5 
+			 */
 			fstream = new FileInputStream(fileName);
 			in = new DataInputStream(fstream);
 			input = new BufferedReader(new InputStreamReader(in));
 			
 			while((eachLine = input.readLine()) != null){
 				String[] tokens = eachLine.split(",");
-				System.out.println(tokens[0]+tokens[1]);
+				System.out.println(tokens[0]+tokens[1]);//测试打印任务参数文件每一行的前两个属性
 				Tasks task = new Tasks();
 				
 				task.setTaskName(Integer.parseInt(tokens[0].trim()));
